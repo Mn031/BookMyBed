@@ -24,3 +24,15 @@ INSERT INTO QUARANTINE_CENTERS (CENTER_ID, CENTER_NAME, ADDRESS, MOBILE_NO, PERS
 INSERT INTO QUARANTINE_CENTERS (CENTER_ID, CENTER_NAME, ADDRESS, MOBILE_NO, PERSON_IN_CHARGE, BEDS, STARTING_PRICE) Values ("JYPgnd02", "Jaypee Hospital", "Goberdhanpur Sector 128 Shahpur Govardhanpur Bangar Noida", " 01244122222", "Disha Bassi", " 32", " 500");
 INSERT INTO QUARANTINE_CENTERS (CENTER_ID, CENTER_NAME, ADDRESS, MOBILE_NO, PERSON_IN_CHARGE, BEDS, STARTING_PRICE) Values ("CKBggm03", "CK Birla Hospital", " Block J_CK Birla Hospital_Nirvana Central Rd_ Mayfield Garden_Gurugram", " 01244882249", " Rajendra Dey", " 35", " 500");
 INSERT INTO QUARANTINE_CENTERS (CENTER_ID, CENTER_NAME, ADDRESS, MOBILE_NO, PERSON_IN_CHARGE, BEDS, STARTING_PRICE) Values ("ARTggm04", "Artemis Hospital ", " Sector 51 Gurugram Haryana 122001", " 01244511112", " Drishti Bhatia", " 27", " 600");
+
+create Table Patient(
+Patient_ID Varchar(5),
+Patient_Name Varchar(30),
+Patient_Mobile_No bigint(10),
+Guardian_Name Varchar(30),
+Guardian_Mob_no bigint(10),
+Center_ID Varchar(255),
+Status Varchar(15),
+PRIMARY KEY (Patient_ID),
+FOREIGN KEY (Center_ID) references Quarantine_centers(CENTER_ID)
+);
