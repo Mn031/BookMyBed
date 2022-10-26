@@ -1,6 +1,6 @@
 import mysql.connector
 import textwrap
-pass1 = "yashmayash"   #enter your password
+pass1 =   #enter your password
 
 con=mysql.connector.connect(host="localhost",password=pass1,user="root",database = "BOOKMYBED")
 cursor=con.cursor()
